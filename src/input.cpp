@@ -27,6 +27,7 @@ void keyboard(GLFWwindow *window, int key, int scancode, int action, int mods) {
     if (action == GLFW_RELEASE) {
         // switch (key) {
         // case GLFW_KEY_C:
+
         // rectangle_rot_status = !rectangle_rot_status;
         // break;
         // case GLFW_KEY_P:
@@ -83,5 +84,16 @@ void mouseButton(GLFWwindow *window, int button, int action, int mods) {
 }
 
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
-    // Do something
+    // if !((zoom > 95 && yoffset == 1) || (zoom < 30 && yoffset == -1)){
+    // zoom += 2*yoffset;
+    // }
+    if (yoffset > 0 )
+    {
+        if (zoom < 100) zoom++;
+    }
+    if (yoffset < 0 )
+    {
+        if (zoom > 40) zoom--;
+    }
+    // cout << zoom <<endl;
 }

@@ -65,21 +65,38 @@ extern GLMatrices Matrices;
 enum direction_t { DIR_UP, DIR_RIGHT, DIR_DOWN, DIR_LEFT };
 
 struct bounding_box_t {
-    float x;
-    float y;
+    // float x;
+    // float y;
+    // float z;
+    glm::vec4 coordinates;
     float width;
     float height;
+    float depth;
 };
 
-bool detect_collision(bounding_box_t a, bounding_box_t b);
+// bool detect_collision(const Ball& a,const Ball& b);
 
-extern float screen_zoom, screen_center_x, screen_center_y;
+extern float screen_zoom, screen_center_x, screen_center_y, zoom;
 void reset_screen();
 
 // ---- Colors ----
 extern const color_t COLOR_RED;
 extern const color_t COLOR_GREEN;
 extern const color_t COLOR_BLACK;
+extern const color_t bluecolor;
+extern const color_t lightblue;
+extern const color_t lightred;
+extern const color_t lightgreen;
 extern const color_t COLOR_BACKGROUND;
+extern const color_t silver;
+extern const color_t darkgreen;
+extern const color_t gold;
+extern const color_t darkblue;
+extern const color_t darkred;
+extern const color_t slategrey;
+extern const color_t steelblue;
+extern const color_t wheat;
+extern const color_t brown;
+extern const color_t springgreen;
 
 #endif
